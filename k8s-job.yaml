@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: azure-storage-mover-job
+spec:
+  # Schedule for 8:00 AM daily (UTC)
+  schedule: "0 8 * * *"
+  # Initially suspend the job (set to false to enable)
+  suspend: true
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          volumes:
+          - name: config-volume
+            secret:
+              secretName: azure-storage-config
+          containers:
+          - name: storage-mover-container
+            # Replace with the actual name of your built Docker image
+            image: azure-storage-mover:latest
+            imagePullPolicy: Never # or Always, depending on your needs
+            volumeMounts:
+            - name: config-volume
+              mountPath: /app/config.toml
+              subPath: config.toml # Mount only the config.toml key from the secret

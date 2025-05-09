@@ -1,0 +1,16 @@
+# Azure Storage Configuration
+# Replace with your actual source container name
+source_container_name = "some-container-name"
+
+# Replace with your actual destination container name
+destination_container_name = "some-container-name-dest"
+
+# Replace with the tag key to check for
+tag_key = "azure-mover"
+
+# Azure Storage Connection Strings
+# Replace with your actual source storage account connection string
+source_connection_string = "sup3rs3cr3t"
+
+# Replace with your actual destination storage account connection string
+destination_connection_string = "sup3rs3cr3t"

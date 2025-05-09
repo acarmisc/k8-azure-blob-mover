@@ -1,0 +1,60 @@
+# Byte-code files
+*.pyc
+__pycache__/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+egg-info/
+.eggs/
+parts/
+sdist/
+var/
+
+# Development environments
+.vscode/
+.idea/
+
+# Virtual environments
+.venv/env/
+
+# Tox
+.tox/
+
+# Nose
+.noseids
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.sock
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+.cache/
+
+# pytest
+.pytest_cache/
+
+# Sphinx documentation
+docs/_build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Celery
+celeryd.pid
+celerybeat.pid
+
+# Django
+*.log
+
+# Pyinstaller
+*.spec
+
+# User-defined exclusions
+*.toml
