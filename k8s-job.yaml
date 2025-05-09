@@ -3,10 +3,10 @@ kind: CronJob
 metadata:
   name: azure-storage-mover-job
 spec:
-  # Schedule for 8:00 AM daily (UTC)
-  schedule: "0 8 * * *"
-  # Initially suspend the job (set to false to enable)
-  suspend: true
+  # Schedule to run every 4 hours
+  schedule: "0 */4 * * *"
+  # Ensure the job is not suspended
+  suspend: false
   jobTemplate:
     spec:
       template:
